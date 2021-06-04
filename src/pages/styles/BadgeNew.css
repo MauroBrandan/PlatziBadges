@@ -6,3 +6,10 @@
 	margin-bottom: 1rem;
 	color: #ffffff;
 }
+
+.BadgeNew__main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 25px;
+	margin: 0 32px;
+}
