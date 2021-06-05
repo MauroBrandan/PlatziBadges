@@ -1,0 +1,47 @@
+.BadgeList__container {
+	width: 100%;
+}
+
+.BadgeList__badge-container {
+	display: flex;
+	width: 90%;
+	height: 92px;
+	margin: 12px auto;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #f4f4f7;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.55);
+}
+
+.BadgeList__badge-img {
+	height: fit-content;
+	margin: 0 25px;
+	border-radius: 50%;
+}
+
+.BadgeList__badge-info p {
+	margin: 5px;
+}
+
+.BadgeList__badge-info p:first-child {
+	font-weight: 700;
+}
+
+.BadgeList__badge-info p:last-child {
+	font-weight: 300;
+}
+
+.BadgeList__badge-info div {
+	display: flex;
+	align-items: center;
+	color: #74caff;
+}
+
+.twitter-logo {
+	width: 24px;
+	height: 24px;
+	background-image: url('https://cdn.svgporn.com/logos/twitter.svg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
