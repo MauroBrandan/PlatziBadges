@@ -2,7 +2,6 @@ import React from 'react'
 
 import './styles/BadgeNew.css'
 import Hero from '../images/badge-header.svg'
-import Navbar from '../components/Navbar'
 import Badge from '../components/Badge'
 import BadgeForm from '../components/BadgeForm'
 
@@ -28,8 +27,7 @@ class BadgeNew extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Navbar />
+			<React.Fragment>
 				<div className='BadgeNew__hero'>
 					<img className='BadgeNew__hero--img' src={Hero} alt='Hero' />
 				</div>
@@ -44,7 +42,7 @@ class BadgeNew extends React.Component {
 					/>
 					<BadgeForm onChange={this.handleChange} formValues={this.state.form} />
 				</div>
-			</div>
+			</React.Fragment>
 		)
 	}
 }
