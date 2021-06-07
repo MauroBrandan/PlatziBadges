@@ -1,10 +1,15 @@
 import React from 'react'
 
+import './styles/Home.css'
+import astronaut from '../images/not-found.webp'
+
 function NotFound() {
 	return (
-		<div>
-			<h1>404: Not Found</h1>
-		</div>
+		<React.Fragment>
+			<div className='Home'>
+				<img src={astronaut} alt='astronauta' />
+			</div>
+		</React.Fragment>
 	)
 }
 

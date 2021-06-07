@@ -1,0 +1,25 @@
+.Home {
+	width: 100%;
+	height: 100vh;
+	color: white;
+	background: url('../../images/stars.svg'), #1b1b25;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.Home__info {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.Home__info p:first-of-type {
+	margin-bottom: -16px;
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.Home__img {
+	width: 50%;
+}
