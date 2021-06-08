@@ -18,7 +18,7 @@ export class BadgesList extends Component {
 		}
 		return (
 			<ul className='BadgeList__container'>
-				{this.props.badges.map((badge) => {
+				{this.props.badges.reverse().map((badge) => {
 					return (
 						<li key={badge.id}>
 							<div className='BadgeList__badge-container'>

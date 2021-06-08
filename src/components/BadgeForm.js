@@ -56,6 +56,8 @@ export class BadgeForm extends Component {
 					<button onClick={this.handleClick} className='btn btn-primary'>
 						Save
 					</button>
+
+					{this.props.error && <p>{this.props.error.message}</p>}
 				</form>
 			</div>
 		)

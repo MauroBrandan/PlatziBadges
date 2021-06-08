@@ -14,3 +14,7 @@
 	height: 25px;
 	margin-bottom: 8px;
 }
+
+.form__container p {
+	color: tomato;
+}
