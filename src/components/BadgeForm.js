@@ -7,17 +7,12 @@ export class BadgeForm extends Component {
 		console.log('Button was clicked')
 	}
 
-	handleSubmit = (e) => {
-		e.preventDefault()
-		console.log('Form was submitted')
-	}
-
 	render() {
 		return (
 			<div>
 				<h1 className='form__title'>New Attendant</h1>
 
-				<form onSubmit={this.handleSubmit} className='form__container'>
+				<form onSubmit={this.props.onSubmit} className='form__container'>
 					<label>First Name</label>
 					<input
 						onChange={this.props.onChange}
