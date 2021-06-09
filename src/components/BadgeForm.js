@@ -10,7 +10,7 @@ export class BadgeForm extends Component {
 	render() {
 		return (
 			<div>
-				<h1 className='form__title'>New Attendant</h1>
+				<h1 className='form__title'>{this.props.title}</h1>
 
 				<form onSubmit={this.props.onSubmit} className='form__container'>
 					<label>First Name</label>

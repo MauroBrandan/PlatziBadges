@@ -37,6 +37,7 @@ export class BadgesList extends Component {
 									</div>
 									<p>{badge.jobTitle}</p>
 								</div>
+								<Link to={`/badges/${badge.id}/edit`} className='BadgeList__edit btn btn-primary'>Edit</Link>
 							</div>
 						</li>
 					)
