@@ -30,6 +30,10 @@
 	background: #f4f4f7;
 }
 
+.Badge__section-info p {
+	color: #74caff;
+}
+
 .Badge__section-info p,
 .Badge__section-info h3 {
 	margin: 5px;

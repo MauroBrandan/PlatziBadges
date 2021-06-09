@@ -1,0 +1,52 @@
+.BadgeDetails__hero {
+	width: 100%;
+	padding: 2rem 0;
+	background: url('../../images/stars.svg'), #1b1b25;
+	background-repeat: repeat;
+	margin-bottom: 1rem;
+	color: #ffffff;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	justify-items: center;
+}
+
+.BadgeDetails__hero img {
+	grid-column: 2 / 3;
+}
+
+.BadgeDetails__hero-attendant-name {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	grid-column: auto;
+}
+
+.BadgeDetails__container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+}
+
+.BadgeDetails__badge {
+	grid-column: 2 / 3;
+	min-width: 500px;
+}
+
+.BadgeDetails__actions {
+	height: 40%;
+	width: 50%;
+	min-width: 250px;
+	justify-self: center;
+	align-self: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.BadgeDetails__actions h2 {
+	margin: 0;
+}
