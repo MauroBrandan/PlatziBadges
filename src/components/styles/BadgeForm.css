@@ -6,13 +6,30 @@
 .form__container {
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
 	width: 50%;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 12px;
+	border-radius: 8px;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.55);
+}
+
+.form__container label {
+	font-weight: 700;
 }
 
 .form__container input {
-	height: 25px;
-	margin-bottom: 8px;
+	height: 32px;
+	margin: 4px 0 12px 0;
+	padding: 0 12px;
+	border: none;
+	border-radius: 8px;
+	font-family: 'Lato', 'Helvetica Neue', sans-serif;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.55);
+}
+
+.form__container input:focus {
+	outline: none;
 }
 
 .form__container p {

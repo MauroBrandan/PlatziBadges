@@ -1,24 +1,66 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './styles/BadgesList.css'
 import Gravatar from './Gravatar'
 
-export class BadgesList extends Component {
-	render() {
-		if (this.props.badges.length === 0) {
-			return (
-				<div>
-					<h3>No badges were found</h3>
-					<Link className='btn btn-primary' to='/badges/new'>
-						Create new badge
-					</Link>
-				</div>
-			)
-		}
+function useSearchBadges(badges) {
+	const [query, setQuery] = React.useState('')
+	const [filteredBadges, setFilteredBadges] = React.useState(badges)
+
+	React.useMemo(() => {
+		const result = badges.filter((badge) => {
+			return `${badge.firstName}${badge.lastName}`
+				.toLowerCase()
+				.includes(query.toLowerCase())
+		})
+
+		setFilteredBadges(result)
+	}, [badges, query])
+
+	return { query, setQuery, filteredBadges }
+}
+
+function BadgesList(props) {
+	const badges = props.badges
+
+	const { query, setQuery, filteredBadges } = useSearchBadges(badges)
+
+	if (filteredBadges.length === 0) {
 		return (
+			<div className='BadgesList'>
+				<div className='search'>
+					<label>Filter Badges</label>
+					<input
+						type='text'
+						value={query}
+						onChange={(e) => {
+							setQuery(e.target.value)
+						}}
+					/>
+				</div>
+
+				<h3>No badges were found</h3>
+				<Link className='btn btn-primary' to='/badges/new'>
+					Create new badge
+				</Link>
+			</div>
+		)
+	}
+	return (
+		<div className='BadgesList'>
+			<div className='search'>
+				<label>Filter Badges</label>
+				<input
+					type='text'
+					value={query}
+					onChange={(e) => {
+						setQuery(e.target.value)
+					}}
+				/>
+			</div>
 			<ul className='BadgeList__container'>
-				{this.props.badges.reverse().map((badge) => {
+				{filteredBadges.reverse().map((badge) => {
 					return (
 						<li key={badge.id}>
 							<div className='BadgeList__badge-container'>
@@ -48,8 +90,8 @@ export class BadgesList extends Component {
 					)
 				})}
 			</ul>
-		)
-	}
+		</div>
+	)
 }
 
 export default BadgesList

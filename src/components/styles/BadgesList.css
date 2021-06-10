@@ -1,3 +1,39 @@
+.BadgesList {
+	width: 100%;
+	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 75%;
+}
+
+.search label {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.search input {
+	width: 100%;
+	height: 32px;
+	margin: 8px 0;
+	padding: 0 12px;
+	border: none;
+	border-radius: 8px;
+	font-family: 'Lato', 'Helvetica Neue', sans-serif;
+	font-weight: 700;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.55);
+}
+
+.search input:focus {
+	outline: none;
+}
+
 .BadgeList__container {
 	width: 100%;
 	min-width: 320px;
@@ -48,7 +84,7 @@
 	background-repeat: no-repeat;
 }
 
-.BadgeList__edit{
+.BadgeList__edit {
 	position: absolute;
 	right: 5%;
 	justify-self: center;
